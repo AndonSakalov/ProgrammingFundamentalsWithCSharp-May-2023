@@ -1,0 +1,26 @@
+﻿namespace _12.EvenNumber
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = int.Parse(Console.ReadLine());
+            bool isOdd = true;
+            if (!(number % 2 != 0))
+            {
+                Console.WriteLine($"The number is: {Math.Abs(number)}");
+                isOdd = false;
+            }
+            while (isOdd)
+            {
+                Console.WriteLine("Please write an even number.");
+                number = int.Parse(Console.ReadLine());
+                if (!(number % 2 != 0))
+                {
+                    Console.WriteLine($"The number is: {Math.Abs(number)}");
+                    isOdd = false;
+                }
+            }
+        }
+    }
+}
